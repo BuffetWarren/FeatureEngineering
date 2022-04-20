@@ -104,10 +104,6 @@ featureFileSave=paste(featureFile,"Feature_collection_CTDD.csv",sep="")
 write.table(a13,featureFileSave,quote=FALSE,sep=",")
 
 
-# a15 = t(sapply(peptide_list_essential, tryCatch(
-#   extractMoreauBroto
-# ), nlag=30))
-#a15 = t(sapply(peptide_list_essential, extractMoreauBroto, nlag=10))
 a15 = t(sapply(peptide_list_essential, extractMoreauBroto, nlag=30))
 #a16 = t(sapply(peptide_list_nessential, extractMoreauBroto, nlag=10))
 
@@ -121,7 +117,6 @@ colnames(a15) <- paste("Moreau", colnames(a15), sep = "_")
 featureFileSave=paste(featureFile,"Feature_collection_Moreau.csv",sep="")
 write.table(a15,featureFileSave,quote=FALSE,sep=",")
 
-#a17 = t(sapply(peptide_list_essential, extractMoran, nlag=10))
 a17 = t(sapply(peptide_list_essential, extractMoran, nlag=30))
 #a18 = t(sapply(peptide_list_nessential, extractMoran, nlag=10))
 
@@ -135,7 +130,6 @@ colnames(a17) <- paste("Moran", colnames(a17), sep = "_")
 featureFileSave=paste(featureFile,"Feature_collection_Moran.csv",sep="")
 write.table(a17,featureFileSave,quote=FALSE,sep=",")
 
-#a19 = t(sapply(peptide_list_essential, extractGeary, nlag=10))
 a19 = t(sapply(peptide_list_essential, extractGeary, nlag=30))
 #a20 = t(sapply(peptide_list_nessential, extractGeary, nlag=10))
 
@@ -146,7 +140,6 @@ colnames(a19) <- paste("Geary", colnames(a19), sep = "_")
 
 #colnames(c10) <- paste("Geary", colnames(c10), sep = "_")
 
-#a21 = t(sapply(peptide_list_essential, extractSOCN, nlag=10))
 a21 = t(sapply(peptide_list_essential, extractSOCN, nlag=30))
 #a22 = t(sapply(peptide_list_nessential, extractSOCN, nlag=10))
 
@@ -157,7 +150,6 @@ colnames(a21) <- paste("SOCN", colnames(a21), sep = "_")
 
 #colnames(c11) <- paste("SOCN", colnames(c11), sep = "_")
 
-#a23 = t(sapply(peptide_list_essential, extractQSO,nlag=10))
 a23 = t(sapply(peptide_list_essential, extractQSO,nlag=30))
 #a24 = t(sapply(peptide_list_nessential, extractQSO,nlag=10))
 
@@ -172,7 +164,6 @@ featureFileSave=paste(featureFile,"Feature_collection_QSO.csv",sep="")
 write.table(a23,featureFileSave,quote=FALSE,sep=",")
 
 
-#a25 = t(sapply(peptide_list_essential, extractPAAC,lambda=10))
 a25 = t(sapply(peptide_list_essential, extractPAAC,lambda=30))
 #a26 = t(sapply(peptide_list_nessential, extractPAAC,lambda=10))
 
@@ -183,7 +174,6 @@ colnames(a25) <- paste("PAAC", colnames(a25), sep = "_")
 
 #colnames(c13) <- paste("PAAC", colnames(c13), sep = "_")
 
-#a27 = t(sapply(peptide_list_essential, extractAPAAC,lambda=10))
 a27 = t(sapply(peptide_list_essential, extractAPAAC,lambda=30))
 #a28 = t(sapply(peptide_list_nessential, extractAPAAC,lambda=10))
 
