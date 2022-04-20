@@ -1,0 +1,7 @@
+install.packages(c('protr','rDNAse','seqinr','matrixTests')
+!pip install biopython
+!pip install pymrmr
+Rscript checkSequence.R SRB_dti_EssentialsequenceNT-clean.fasta SRB_dti_EssentialsequenceAA-clean.fasta Essential
+python cleanEssentialFile.py
+codonw EssentialsequenceNT-clean.fasta EssentialcodonwFeature.out EssentialcodonwFeature.blk -nomenu -nowarn -all_indices -human
+Rscript scriptFeatureBySeq.R EssentialsequenceNT-clean.fasta EssentialsequenceAA-clean.fasta Essential
